@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Dati Cifrati Ricevuti</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h1 { color: #00ff99; }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #222;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+        }
+        th {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chiave e File Criptati</h1>
+    <p><strong>Chiave:</strong> <span id="chiave">Caricamento...</span></p>
+
+    <table>
+        <thead>
+            <tr><th>File</th></tr>
+        </thead>
+        <tbody id="file-list"></tbody>
+    </table>
+
+    <script>
+        async function caricaDati() {
+            try {
+                const res = await fetch('https://TUO_USERNAME.github.io/TUO_REPO/dati.json');
+                const dati = await res.json();
+                document.getElementById("chiave").textContent = dati.chiave;
+
+                const lista = document.getElementById("file-list");
+                lista.innerHTML = "";
+                dati.files.forEach(nome => {
+                    const row = document.createElement("tr");
+                    const cell = document.createElement("td");
+                    cell.textContent = nome;
+                    row.appendChild(cell);
+                    lista.appendChild(row);
+                });
+            } catch (e) {
+                document.getElementById("chiave").textContent = "Errore nel caricamento.";
+            }
+        }
+
+        caricaDati();
+        setInterval(caricaDati, 5000);
+    </script>
+</body>
+</html>
