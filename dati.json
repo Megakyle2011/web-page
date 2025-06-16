@@ -1,4 +1,6 @@
 {
-  "chiave": "-",
-  "files": []
+    "chiave": 59,
+    "files": [
+        "password.py.encrypt"
+    ]
 }
