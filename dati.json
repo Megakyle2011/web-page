@@ -1,8 +1,15 @@
 {
-    "chiave": 190,
+    "chiave": 52,
     "files": [
+        "Cursor.lnk.encrypt",
+        "GameRunner.lnk.encrypt",
+        "Google Chrome.lnk.encrypt",
+        "Google Classroom.lnk.encrypt",
         "Krita.lnk.encrypt",
         "password.py.encrypt",
-        "Roblox Studio.lnk.encrypt"
+        "Roblox Studio.lnk.encrypt",
+        "spengi.py.encrypt",
+        "StreamingCommunity.lnk.encrypt",
+        "timer 2 ore e spegi.py.encrypt"
     ]
 }
