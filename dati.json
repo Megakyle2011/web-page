@@ -1,6 +1,8 @@
 {
-    "chiave": 102,
+    "chiave": 190,
     "files": [
-        "password.py.encrypt"
+        "Krita.lnk.encrypt",
+        "password.py.encrypt",
+        "Roblox Studio.lnk.encrypt"
     ]
 }
